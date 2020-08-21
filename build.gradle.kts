@@ -1,22 +1,19 @@
-val kotlinTestVersion = "4.2.0"
-val logbackVersion = "1.2.3"
-val slf4jVersion = "1.7.30"
+ext["kotestVersion"] = "4.2.0"
+ext["logbackVersion"] = "1.2.3"
+ext["slf4jVersion"] = "1.7.30"
 
 plugins {
-    application
+    base
     kotlin("jvm") version "1.4.0"
 }
 
-application {
-    mainClassName = "com.why.hellogradle.MainKt"
-}
+allprojects {
+    group = "com.why.hellogradle"
 
-repositories {
-    jcenter()
-}
+    version = "1.0-SNAPSHOT"
 
-dependencies {
-    implementation(kotlin("stdlib"))
-    testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotlinTestVersion")
-    testRuntimeOnly("org.slf4j:slf4j-nop:$slf4jVersion")
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
 }

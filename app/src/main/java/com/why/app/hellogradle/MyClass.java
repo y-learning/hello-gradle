@@ -1,4 +1,4 @@
-package com.why.hellogradle;
+package com.why.app.hellogradle;
 
 public class MyClass {
     public static String getMessage(Lang language) {
