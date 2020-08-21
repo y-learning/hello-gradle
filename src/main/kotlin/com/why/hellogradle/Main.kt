@@ -1,7 +1,5 @@
 package com.why.hellogradle
 
-import MyClass
-
 enum class Lang { GERMAN, FRENCH, ENGLISH, SPANISH }
 
 fun main() {
